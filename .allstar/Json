@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Discord Extension Blocker",
+  "version": "1.0",
+  "description": "特定の拡張機能が Discord に注入するスクリプトを無効化する",
+  "permissions": ["scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://discord.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
